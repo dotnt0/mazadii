@@ -6,7 +6,7 @@
   DELETE THIS FILE after setup is complete!
 */
 
-define('DB_HOST', 'localhost');
+define('DB_HOST', '74.220.51.0/24');
 define('DB_USER', 'root');
 define('DB_PASS', '');          /* Change if your MySQL root has a password */
 define('DB_NAME', 'mazadi');
