@@ -1,31 +1,14 @@
 <!DOCTYPE html>
-<!--
-  index.htm — Mazadi Online Auction Platform
-  IT 1390 Web Systems Project — Phase 2
-  Course: IT1390 | Al Imam Mohammad Ibn Saud Islamic University
-  Semester: 1st 2026
-
-  Directory structure:
-    index.htm   — Main HTML file (all pages in one file)
-    style.css   — External CSS stylesheet (linked below)
-
-  All images are sourced from Unsplash (unsplash.com).
-  Source comments appear before each image.
--->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mazadi — مزادي | Online Auction Platform</title>
 
-    <!-- External CSS stylesheet — linked as required by Phase 2 -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ============================================================
-     HEADER — appears on every page
-     ============================================================ -->
 <header>
     <h1 class="site-title" onclick="showPage('home')">
         MAZADI <span class="arabic">مزادي</span>
@@ -33,27 +16,21 @@
     <p class="site-tagline">Saudi Arabia's Online Auction Platform</p>
 </header>
 
-<!-- ============================================================
-     NAVIGATION BAR — consistent across all pages (Phase 2 req.)
-     ============================================================ -->
 <nav>
     <div class="nav-inner">
 
-        <!-- Main navigation links -->
         <div class="nav-links">
             <a class="nav-link" onclick="showPage('home')">Home</a>
             <a class="nav-link" onclick="showPage('about')">About Us</a>
             <a class="nav-link" onclick="showPage('create')">Create Auction</a>
         </div>
 
-        <!-- Search bar -->
         <form class="search-form" onsubmit="handleSearch(event)">
             <label for="search-input">Search:</label>
             <input type="text" id="search-input" placeholder="Search auctions...">
             <button type="submit">Go</button>
         </form>
 
-        <!-- Log In / Sign Up buttons (graphic navigation buttons) -->
         <div class="auth-buttons">
             <a class="btn-login" onclick="showPage('login')">Log In</a>
             <a class="btn-signup" onclick="showPage('login')">Sign Up</a>
@@ -63,19 +40,13 @@
 </nav>
 
 
-<!-- ============================================================
-     PAGE 1 — HOME  (this is index.htm — the home page)
-     ============================================================ -->
 <div id="page-home" class="page">
 
-    <!-- Hero banner with background image -->
     <div class="hero">
         <h2>Bid Smart. Buy Fair.</h2>
         <p>Saudi Arabia's leading online auction platform — vehicles, electronics, watches &amp; more</p>
         <div class="hero-buttons">
-            <!-- Graphic image button — Create Auction -->
             <a class="btn-primary" onclick="showPage('create')">+ Create Auction</a>
-            <!-- Graphic image button — Log In -->
             <a class="btn-outline" onclick="showPage('login')">Log In / Sign Up</a>
         </div>
     </div>
@@ -83,10 +54,8 @@
     <div class="section">
         <h2 class="section-title">🏷️ Active Auctions</h2>
 
-        <!-- Listing 1 — Vehicles -->
         <p class="listing-label"><strong>Listing 1</strong> — <em>Vehicles</em></p>
         <div class="auction-card">
-            <!-- Image source: Unsplash (unsplash.com) — vintage car / automotive photography -->
             <img src="https://images.unsplash.com/photo-1672173625722-04fd626667e1?w=900&q=80"
                  alt="1972 Ford Mustang Classic Car"
                  class="auction-img"
@@ -107,10 +76,8 @@
             </div>
         </div>
 
-        <!-- Listing 2 — Watches & Jewelry -->
         <p class="listing-label"><strong>Listing 2</strong> — <em>Watches &amp; Jewelry</em></p>
         <div class="auction-card">
-            <!-- Image source: Unsplash (unsplash.com) — luxury watch photography -->
             <img src="https://images.unsplash.com/photo-1763189851330-23f36450bbde?w=900&q=80"
                  alt="Rolex Submariner Vintage Watch"
                  class="auction-img"
@@ -131,10 +98,8 @@
             </div>
         </div>
 
-        <!-- Listing 3 — Electronics -->
         <p class="listing-label"><strong>Listing 3</strong> — <em>Electronics</em></p>
         <div class="auction-card">
-            <!-- Image source: Unsplash (unsplash.com) — electronics / laptop photography -->
             <img src="https://images.unsplash.com/photo-1607603289612-71ae134aa577?w=900&q=80"
                  alt="Apple MacBook Pro Laptop"
                  class="auction-img"
@@ -154,9 +119,8 @@
                 </div>
             </div>
         </div>
-    </div><!-- end .section -->
+    </div>
 
-    <!-- About Us summary (matches wireframe bottom section) -->
     <div class="about-summary">
         <h2>About Us</h2>
         <p>We are a <strong>Saudi Auction house website</strong> who strive for a
@@ -165,19 +129,15 @@
         <a class="btn-primary" onclick="showPage('about')">Learn More →</a>
     </div>
 
-</div><!-- end page-home -->
+</div>
 
 
-<!-- ============================================================
-     PAGE 2 — ABOUT US
-     ============================================================ -->
 <div id="page-about" class="page hidden">
     <div class="section">
         <h2 class="section-title">About Us — من نحن</h2>
 
         <div class="about-layout">
             <div class="about-image-col">
-                <!-- Image source: Unsplash (unsplash.com) — team / office / group meeting -->
                 <img src="https://images.unsplash.com/photo-1633457896836-f8d6025c85d1?w=800&q=80"
                      alt="The Mazadi Team"
                      class="about-img">
@@ -198,7 +158,6 @@
             </div>
         </div>
 
-        <!-- Three cards: Mission, Global, Trust -->
         <div class="cards-row">
             <div class="card">
                 <p class="card-icon">🎯</p>
@@ -220,7 +179,6 @@
             </div>
         </div>
 
-        <!-- What We Offer -->
         <div class="info-box">
             <h3>What We Offer</h3>
             <ul>
@@ -232,7 +190,6 @@
             </ul>
         </div>
 
-        <!-- Project information box -->
         <div class="project-info">
             <p><strong>Website Name:</strong> Mazadi — مزادي</p>
             <p><strong>Topic:</strong> Online Auction Directory for Saudi Arabia</p>
@@ -243,33 +200,25 @@
         </div>
 
     </div>
-</div><!-- end page-about -->
+</div>
 
 
-<!-- ============================================================
-     PAGE 3 — ITEM PROFILE  (auction detail + bidding + reviews)
-     ============================================================ -->
 <div id="page-item" class="page hidden">
     <div class="section">
 
-        <!-- Breadcrumb navigation -->
         <p class="breadcrumb">
             <a onclick="showPage('home')">Home</a> ›
             <span id="item-category">Vehicles</span> ›
             <strong id="item-title-crumb">Item</strong>
         </p>
 
-        <!-- Item main photo (wireframe: large photo at top) -->
-        <!-- Image source: Unsplash (unsplash.com) — set dynamically by JavaScript -->
         <img id="item-main-img"
              src="https://images.unsplash.com/photo-1672173625722-04fd626667e1?w=900&q=80"
              alt="Auction Item"
              class="item-main-img">
 
-        <!-- Item details + bid box side by side -->
         <div class="item-layout">
 
-            <!-- Left: item details -->
             <div class="item-details">
                 <h2 id="item-title">Item Title</h2>
                 <p class="meta" id="item-meta">📍 Location | 🗂️ Category | 👤 Seller</p>
@@ -279,7 +228,6 @@
                 <p id="item-description">Description goes here.</p>
             </div>
 
-            <!-- Right: bid box (wireframe: current bid + place bid input) -->
             <div class="bid-box-large">
                 <p><em>Starting Bid</em></p>
                 <p id="item-starting" class="starting-bid">—</p>
@@ -290,24 +238,20 @@
 
                 <hr>
 
-                <!-- Place Bid — wireframe: place bid input field -->
                 <label for="bid-input"><strong>Place Bid (SAR)</strong></label>
                 <input type="number" id="bid-input" placeholder="Enter amount">
                 <button onclick="placeBid()" class="btn-primary full-width">Place Bid →</button>
                 <p id="bid-message" class="bid-message"></p>
             </div>
 
-        </div><!-- end .item-layout -->
+        </div>
 
-        <!-- Reviews section -->
         <div class="reviews-section">
             <h3>Reviews (<span id="review-count">0</span>)</h3>
             <div id="reviews-list">
-                <!-- Reviews are inserted here by JavaScript -->
             </div>
         </div>
 
-        <!-- Add Review form -->
         <div class="add-review">
             <h3>Add Your Review</h3>
             <form onsubmit="submitReview(event)">
@@ -340,28 +284,22 @@
         <p><a class="back-link" onclick="showPage('home')">← Back to All Auctions</a></p>
 
     </div>
-</div><!-- end page-item -->
+</div>
 
 
-<!-- ============================================================
-     PAGE 4 — LOG IN / SIGN UP
-     ============================================================ -->
 <div id="page-login" class="page hidden">
     <div class="auth-container">
 
-        <!-- Tab switcher: Log In | Sign Up -->
         <div class="tab-switcher">
             <button class="tab-btn active" id="tab-login" onclick="switchAuthTab('login')">Log In</button>
             <button class="tab-btn"        id="tab-signup" onclick="switchAuthTab('signup')">Sign Up</button>
         </div>
 
-        <!-- LOG IN FORM -->
         <div id="form-login">
             <h2>Log In</h2>
             <p style="text-align:center; color:#777; font-style:italic; margin-bottom:20px;">
                 Welcome back to Mazadi — مزادي
             </p>
-            <!-- Dark form box (matches wireframe) -->
             <div class="dark-form">
                 <form onsubmit="handleLogin(event)">
                     <label for="login-user">
@@ -376,13 +314,11 @@
                     <button type="submit" class="btn-primary full-width">Log In →</button>
                 </form>
                 <p class="switch-link">
-                    Don't have an account?
-                    <a onclick="switchAuthTab('signup')">Sign Up</a>
+                    Don't have an account? <a onclick="switchAuthTab('signup')">Sign Up</a>
                 </p>
             </div>
         </div>
 
-        <!-- SIGN UP FORM -->
         <div id="form-signup" class="hidden">
             <h2>Sign Up</h2>
             <p style="text-align:center; color:#777; font-style:italic; margin-bottom:20px;">
@@ -410,8 +346,7 @@
                     <button type="submit" class="btn-signup-form">Create Account →</button>
                 </form>
                 <p class="switch-link">
-                    Already have an account?
-                    <a onclick="switchAuthTab('login')">Log In</a>
+                    Already have an account? <a onclick="switchAuthTab('login')">Log In</a>
                 </p>
             </div>
         </div>
@@ -421,12 +356,9 @@
         </p>
 
     </div>
-</div><!-- end page-login -->
+</div>
 
 
-<!-- ============================================================
-     PAGE 5 — CREATE AUCTION
-     ============================================================ -->
 <div id="page-create" class="page hidden">
     <div class="section" style="max-width:700px; margin:0 auto;">
 
@@ -437,11 +369,9 @@
 
         <form onsubmit="submitAuction(event)">
 
-            <!-- Item Picture upload (wireframe: large image block) -->
             <div class="form-group">
                 <label>Item Picture</label>
                 <div class="upload-box" onclick="document.getElementById('img-file-input').click()">
-                    <!-- Preview shown after file chosen -->
                     <img id="img-preview" src="" alt="" style="display:none; width:100%; max-height:300px; object-fit:cover;">
                     <div id="upload-placeholder">
                         <p style="font-size:3rem; margin:0;">📷</p>
@@ -453,14 +383,12 @@
                 </div>
             </div>
 
-            <!-- Item Name (wireframe: item name field) -->
             <div class="form-group">
                 <label for="item-name">Item Name *</label>
                 <input type="text" id="item-name"
                        placeholder="e.g. 1972 Ford Mustang – Classic Muscle Car" required>
             </div>
 
-            <!-- Category -->
             <div class="form-group">
                 <label for="item-cat">Category</label>
                 <select id="item-cat">
@@ -474,7 +402,6 @@
                 </select>
             </div>
 
-            <!-- Item Description (wireframe: description textarea) -->
             <div class="form-group">
                 <label for="item-desc">Item Description *</label>
                 <textarea id="item-desc" rows="6"
@@ -482,7 +409,6 @@
                           required></textarea>
             </div>
 
-            <!-- Starting Bid and Duration -->
             <div class="form-row">
                 <div class="form-group">
                     <label for="starting-bid">Starting Bid (SAR) *</label>
@@ -501,14 +427,12 @@
                 </div>
             </div>
 
-            <!-- Location -->
             <div class="form-group">
                 <label for="item-location">Item Location (City, Saudi Arabia) *</label>
                 <input type="text" id="item-location"
                        placeholder="e.g. Riyadh, Jeddah, Dammam..." required>
             </div>
 
-            <!-- Submit / Cancel buttons -->
             <div class="form-buttons">
                 <button type="submit" class="btn-primary">Submit Auction Listing</button>
                 <a class="btn-cancel" onclick="showPage('home')">Cancel</a>
@@ -516,12 +440,9 @@
 
         </form>
     </div>
-</div><!-- end page-create -->
+</div>
 
 
-<!-- ============================================================
-     PAGE 6 — ADMIN LOG IN
-     ============================================================ -->
 <div id="page-admin-login" class="page hidden">
     <div class="auth-container">
 
@@ -534,7 +455,6 @@
             This page is restricted to authorized administrators only.
         </p>
 
-        <!-- Dark admin form box -->
         <div class="dark-form" style="box-shadow: 0 4px 16px rgba(139,69,19,0.2);">
             <form onsubmit="handleAdminLogin(event)">
                 <label for="admin-user">
@@ -558,15 +478,11 @@
         </p>
 
     </div>
-</div><!-- end page-admin-login -->
+</div>
 
 
-<!-- ============================================================
-     PAGE 7 — ADMIN CONTROL PANEL
-     ============================================================ -->
 <div id="page-admin-panel" class="page hidden">
 
-    <!-- Admin page header -->
     <div class="admin-page-header">
         <h2>Control Panel</h2>
         <p style="font-style:italic; color:#f0d0b0; font-size:0.88rem; margin-top:4px;">
@@ -576,23 +492,20 @@
 
     <div class="section">
 
-        <!-- Tab bar: Menu | Auction Editor | Auction Remover (wireframe tabs) -->
         <div class="admin-tabs">
             <button class="admin-tab active" id="atab-menu"    onclick="switchAdminTab('menu')">Menu</button>
-            <button class="admin-tab"         id="atab-editor"  onclick="switchAdminTab('editor')">Auction Editor</button>
+            <button class="admin-tab"        id="atab-editor"  onclick="switchAdminTab('editor')">Auction Editor</button>
             <button class="admin-tab"         id="atab-remover" onclick="switchAdminTab('remover')">Auction Remover</button>
         </div>
 
         <div class="admin-tab-content">
 
-            <!-- ── MENU TAB (Website Management + Activity Map) ── -->
             <div id="admin-menu" class="admin-panel">
                 <h3>Website Management</h3>
                 <p style="color:#555; font-size:0.88rem; margin-bottom:20px;">
                     Overview of help requests, auction details, and user bidding activity.
                 </p>
 
-                <!-- Help requests box -->
                 <div class="help-requests">
                     <h4>📩 Help Requests (2)</h4>
                     <div class="help-item">
@@ -605,21 +518,16 @@
                     </div>
                 </div>
 
-                <!-- Activity map heading -->
                 <h4 style="border-bottom:1px solid #1a6b8a; padding-bottom:6px; margin-top:24px; margin-bottom:14px;">
                     User activity map showing most popular auctions:
                 </h4>
 
-                <!-- Activity map: images + stats (wireframe: teal box with image blocks) -->
                 <div class="activity-map">
                     <div class="activity-images">
-                        <!-- Image source: Unsplash (unsplash.com) — vintage car -->
                         <img src="https://images.unsplash.com/photo-1672173625722-04fd626667e1?w=400&q=70"
                              alt="Ford Mustang">
-                        <!-- Image source: Unsplash (unsplash.com) — luxury watch -->
                         <img src="https://images.unsplash.com/photo-1763189851330-23f36450bbde?w=400&q=70"
                              alt="Rolex Watch">
-                        <!-- Image source: Unsplash (unsplash.com) — laptop / electronics -->
                         <img src="https://images.unsplash.com/photo-1607603289612-71ae134aa577?w=400&q=70"
                              alt="MacBook Pro">
                     </div>
@@ -659,19 +567,17 @@
                         <p>👤 <strong>Sara Al-Otaibi</strong> bid <strong>19,000 SAR</strong> on Rolex Submariner</p>
                         <p>👤 <strong>Mohammed Al-Harbi</strong> bid <strong>7,400 SAR</strong> on MacBook Pro</p>
                     </div>
-                </div><!-- end .activity-map -->
+                </div>
 
-            </div><!-- end admin-menu -->
+            </div>
 
 
-            <!-- ── AUCTION EDITOR TAB ── -->
             <div id="admin-editor" class="admin-panel hidden">
                 <h3>Auction Editor</h3>
                 <p style="color:#555; font-size:0.88rem; margin-bottom:20px;">
                     Select an active auction, then edit its details below.
                 </p>
 
-                <!-- Step 1: Select auction -->
                 <div class="info-box">
                     <label for="edit-select"><strong>Step 1: Select an auction to edit</strong></label>
                     <select id="edit-select" onchange="loadEditForm()" style="margin-top:8px;">
@@ -682,7 +588,6 @@
                     </select>
                 </div>
 
-                <!-- Step 2: Edit form (hidden until auction selected) -->
                 <div id="edit-form-wrapper" class="hidden"
                      style="margin-top:20px; border:2px solid #1a6b8a; border-radius:6px; padding:18px;">
                     <h4 style="color:#1a6b8a; margin-bottom:14px;">Step 2: Edit Auction Details</h4>
@@ -701,10 +606,9 @@
                     <button onclick="saveEdit()" class="btn-primary">Save Changes</button>
                     <p id="edit-message" class="bid-message"></p>
                 </div>
-            </div><!-- end admin-editor -->
+            </div>
 
 
-            <!-- ── AUCTION REMOVER TAB ── -->
             <div id="admin-remover" class="admin-panel hidden">
                 <h3 style="color:#c0392b;">Auction Remover</h3>
                 <p style="color:#555; font-size:0.88rem; margin-bottom:20px;">
@@ -715,10 +619,8 @@
                     <form onsubmit="deleteAuction(event)">
                         <p><strong>Select an auction to delete:</strong></p><br>
 
-                        <!-- Radio card 1 -->
                         <label class="radio-card" id="radio-1">
                             <input type="radio" name="del-auction" value="1" onchange="selectDelete(1)">
-                            <!-- Image source: Unsplash (unsplash.com) — vintage car -->
                             <img src="https://images.unsplash.com/photo-1672173625722-04fd626667e1?w=200&q=70" alt="Mustang">
                             <div>
                                 <p><strong>1972 Ford Mustang – Classic Muscle Car</strong></p>
@@ -726,10 +628,8 @@
                             </div>
                         </label>
 
-                        <!-- Radio card 2 -->
                         <label class="radio-card" id="radio-2">
                             <input type="radio" name="del-auction" value="2" onchange="selectDelete(2)">
-                            <!-- Image source: Unsplash (unsplash.com) — luxury watch -->
                             <img src="https://images.unsplash.com/photo-1763189851330-23f36450bbde?w=200&q=70" alt="Watch">
                             <div>
                                 <p><strong>Rolex Submariner – Vintage 1989</strong></p>
@@ -737,10 +637,8 @@
                             </div>
                         </label>
 
-                        <!-- Radio card 3 -->
                         <label class="radio-card" id="radio-3">
                             <input type="radio" name="del-auction" value="3" onchange="selectDelete(3)">
-                            <!-- Image source: Unsplash (unsplash.com) — laptop / electronics -->
                             <img src="https://images.unsplash.com/photo-1607603289612-71ae134aa577?w=200&q=70" alt="MacBook">
                             <div>
                                 <p><strong>Apple MacBook Pro 16" M3 Max</strong></p>
@@ -752,22 +650,17 @@
                         <p id="delete-message" class="bid-message"></p>
                     </form>
                 </div>
-            </div><!-- end admin-remover -->
+            </div>
 
-        </div><!-- end .admin-tab-content -->
+        </div>
 
-        <!-- Back to site link for admin -->
         <p style="text-align:center; margin-top:16px;">
             <a onclick="showPage('home')" style="color:#8b4513; font-size:0.88rem;">← Back to Main Website</a>
         </p>
 
     </div>
-</div><!-- end page-admin-panel -->
+</div>
 
-
-<!-- ============================================================
-     FOOTER — appears on every page
-     ============================================================ -->
 <footer>
     <p class="footer-title">MAZADI — مزادي</p>
     <p><em>Saudi Arabia's trusted online auction platform</em></p>
@@ -783,434 +676,319 @@
     </p>
 </footer>
 
-
-<!-- ============================================================
-     JAVASCRIPT — navigation & form handling (kept in one file)
-     ============================================================ -->
 <script>
+var items = {
+    1: {
+        title        : "1972 Ford Mustang – Classic Muscle Car",
+        category     : "Vehicles",
+        location     : "Riyadh, Saudi Arabia",
+        seller       : "Abdullah Al-Rashid",
+        date         : "2026-04-18",
+        description  : "A rare 1972 Ford Mustang in excellent condition. Original engine, restored interior, and a beautiful deep red exterior. Comes with full service history and a clean title. This is a genuine collector's piece, well maintained over the years.",
+        startingBid  : "30,000 SAR",
+        currentBid   : 45000,
+        bids         : 12,
+        endsIn       : "2d 14h 32m",
+        rating       : "4.5",
+        img          : "https://images.unsplash.com/photo-1672173625722-04fd626667e1?w=900&q=80",
+        reviews      : [
+            { name: "Faisal M.", rating: 5, body: "Incredible vehicle, the photos match perfectly. The seller is very responsive and honest about the condition.", date: "2026-04-20" },
+            { name: "Omar K.", rating: 4, body: "Great classic car. Bidding process was smooth and fair. Highly recommend this auction.", date: "2026-04-21" }
+        ]
+    },
+    2: {
+        title        : "Rolex Submariner – Vintage 1989",
+        category     : "Watches & Jewelry",
+        location     : "Jeddah, Saudi Arabia",
+        seller       : "Khalid Watches Est.",
+        date         : "2026-04-19",
+        description  : "An authentic Rolex Submariner from 1989. Comes with original box, papers, and service records. The watch is in near-mint condition with original bracelet. A true horological masterpiece for collectors.",
+        startingBid  : "12,000 SAR",
+        currentBid   : 18500,
+        bids         : 27,
+        endsIn       : "5h 22m",
+        rating       : "5.0",
+        img          : "https://images.unsplash.com/photo-1763189851330-23f36450bbde?w=900&q=80",
+        reviews      : [
+            { name: "Sara Al-Otaibi", rating: 5, body: "Absolutely authentic, I had it verified by a certified watchmaker. Fantastic deal!", date: "2026-04-22" }
+        ]
+    },
+    3: {
+        title        : 'Apple MacBook Pro 16" M3 Max – Barely Used',
+        category     : "Electronics",
+        location     : "Dammam, Saudi Arabia",
+        seller       : "TechDeals SA",
+        date         : "2026-04-20",
+        description  : "Apple MacBook Pro 16-inch with the M3 Max chip, 64GB RAM, and 2TB SSD. Purchased 3 months ago, barely used. In perfect condition, still under Apple warranty. Comes with original charger and box.",
+        startingBid  : "5,500 SAR",
+        currentBid   : 7200,
+        bids         : 8,
+        endsIn       : "1d 9h 10m",
+        rating       : "4.5",
+        img          : "https://images.unsplash.com/photo-1607603289612-71ae134aa577?w=900&q=80",
+        reviews      : [
+            { name: "Mohammed Al-Harbi", rating: 4, body: "Great condition, exactly as described. Shipping was fast too.", date: "2026-04-21" },
+            { name: "Noura F.", rating: 5, body: "Unbelievable price for such a high-spec machine. Very happy with the purchase.", date: "2026-04-22" }
+        ]
+    }
+};
 
-    /* ============================================================
-       AUCTION DATA  (sample data for the three listings)
-       ============================================================ */
-    var items = {
-        1: {
-            title       : "1972 Ford Mustang – Classic Muscle Car",
-            category    : "Vehicles",
-            location    : "Riyadh, Saudi Arabia",
-            seller      : "Abdullah Al-Rashid",
-            date        : "2026-04-18",
-            description : "A rare 1972 Ford Mustang in excellent condition. Original engine, restored interior, and a beautiful deep red exterior. Comes with full service history and a clean title. This is a genuine collector's piece, well maintained over the years.",
-            startingBid : "30,000 SAR",
-            currentBid  : 45000,
-            bids        : 12,
-            endsIn      : "2d 14h 32m",
-            rating      : "4.5",
-            /* Image source: Unsplash (unsplash.com) — vintage car */
-            img         : "https://images.unsplash.com/photo-1672173625722-04fd626667e1?w=900&q=80",
-            reviews     : [
-                { name: "Faisal M.",  rating: 5, body: "Incredible vehicle, the photos match perfectly. The seller is very responsive and honest about the condition.", date: "2026-04-20" },
-                { name: "Omar K.",    rating: 4, body: "Great classic car. Bidding process was smooth and fair. Highly recommend this auction.",                     date: "2026-04-21" }
-            ]
-        },
-        2: {
-            title       : "Rolex Submariner – Vintage 1989",
-            category    : "Watches & Jewelry",
-            location    : "Jeddah, Saudi Arabia",
-            seller      : "Khalid Watches Est.",
-            date        : "2026-04-19",
-            description : "An authentic Rolex Submariner from 1989. Comes with original box, papers, and service records. The watch is in near-mint condition with original bracelet. A true horological masterpiece for collectors.",
-            startingBid : "12,000 SAR",
-            currentBid  : 18500,
-            bids        : 27,
-            endsIn      : "5h 22m",
-            rating      : "5.0",
-            /* Image source: Unsplash (unsplash.com) — luxury watch */
-            img         : "https://images.unsplash.com/photo-1763189851330-23f36450bbde?w=900&q=80",
-            reviews     : [
-                { name: "Sara Al-Otaibi", rating: 5, body: "Absolutely authentic, I had it verified by a certified watchmaker. Fantastic deal!", date: "2026-04-22" }
-            ]
-        },
-        3: {
-            title       : 'Apple MacBook Pro 16" M3 Max – Barely Used',
-            category    : "Electronics",
-            location    : "Dammam, Saudi Arabia",
-            seller      : "TechDeals SA",
-            date        : "2026-04-20",
-            description : "Apple MacBook Pro 16-inch with the M3 Max chip, 64GB RAM, and 2TB SSD. Purchased 3 months ago, barely used. In perfect condition, still under Apple warranty. Comes with original charger and box.",
-            startingBid : "5,500 SAR",
-            currentBid  : 7200,
-            bids        : 8,
-            endsIn      : "1d 9h 10m",
-            rating      : "4.5",
-            /* Image source: Unsplash (unsplash.com) — electronics / laptop */
-            img         : "https://images.unsplash.com/photo-1607603289612-71ae134aa577?w=900&q=80",
-            reviews     : [
-                { name: "Mohammed Al-Harbi", rating: 4, body: "Great condition, exactly as described. Shipping was fast too.",                                   date: "2026-04-21" },
-                { name: "Noura F.",          rating: 5, body: "Unbelievable price for such a high-spec machine. Very happy with the purchase.",                  date: "2026-04-22" }
-            ]
+function showPage(pageId) {
+    var allPages = document.querySelectorAll('.page');
+    for (var i = 0; i < allPages.length; i++) {
+        allPages[i].classList.add('hidden');
+    }
+    var target = document.getElementById('page-' + pageId);
+    if (target) {
+        target.classList.remove('hidden');
+    }
+    window.scrollTo(0, 0);
+}
+
+function showItemPage(id) {
+    var item = items[id];
+    if (!item) return;
+    document.getElementById('item-title').textContent = item.title;
+    document.getElementById('item-title-crumb').textContent = item.title;
+    document.getElementById('item-category').textContent = item.category;
+    document.getElementById('item-meta').textContent = '📍 ' + item.location + ' | 🗂️ ' + item.category + ' | 👤 Seller: ' + item.seller;
+    document.getElementById('item-date').textContent = '📅 Created: ' + item.date + ' | ⭐ Rating: ' + item.rating + ' / 5';
+    document.getElementById('item-description').textContent = item.description;
+    document.getElementById('item-starting').textContent = item.startingBid;
+    document.getElementById('item-current').textContent = item.currentBid.toLocaleString() + ' SAR';
+    document.getElementById('item-bids').innerHTML = item.bids + ' bids | Ends in: <strong class="urgent">' + item.endsIn + '</strong>';
+    document.getElementById('item-main-img').src = item.img;
+    document.getElementById('item-main-img').alt = item.title;
+    document.getElementById('bid-input').placeholder = 'Min: ' + (item.currentBid + 100).toLocaleString();
+    document.getElementById('bid-input').min = item.currentBid + 1;
+    document.getElementById('bid-input').value = '';
+    document.getElementById('bid-message').textContent = '';
+    document.getElementById('bid-message').className = 'bid-message';
+    document.getElementById('bid-input').setAttribute('data-id', id);
+    loadReviews(item.reviews);
+    showPage('item');
+}
+
+function loadReviews(reviews) {
+    var list = document.getElementById('reviews-list');
+    list.innerHTML = '';
+    if (reviews.length === 0) {
+        list.innerHTML = '<p style="color:#777; font-style:italic;">No reviews yet. Be the first!</p>';
+    } else {
+        for (var i = 0; i < reviews.length; i++) {
+            var r = reviews[i];
+            var stars = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
+            var card = document.createElement('div');
+            card.className = 'review-card';
+            card.innerHTML = '<div class="review-header">' + ' <strong>' + r.name + '</strong>' + ' <span class="stars">' + stars + ' (' + r.rating + '/5)</span>' + '</div>' + '<p>' + r.body + '</p>' + '<p class="review-date">Posted on: ' + r.date + '</p>';
+            list.appendChild(card);
         }
+    }
+    document.getElementById('review-count').textContent = reviews.length;
+}
+
+function placeBid() {
+    var input = document.getElementById('bid-input');
+    var msg = document.getElementById('bid-message');
+    var amount = parseInt(input.value);
+    var itemId = parseInt(input.getAttribute('data-id'));
+    var item = items[itemId];
+    if (!amount || amount <= item.currentBid) {
+        msg.textContent = '❌ Your bid must be higher than the current bid of ' + item.currentBid.toLocaleString() + ' SAR.';
+        msg.className = 'bid-message error';
+        return;
+    }
+    
+    item.currentBid = amount;
+    item.bids++;
+    
+    document.getElementById('item-current').textContent = amount.toLocaleString() + ' SAR';
+    document.getElementById('item-bids').innerHTML = item.bids + ' bids | Ends in: <strong class="urgent">' + item.endsIn + '</strong>';
+    
+    input.placeholder = 'Min: ' + (amount + 100).toLocaleString();
+    input.value = '';
+    
+    msg.textContent = '✅ Success! Your bid of ' + amount.toLocaleString() + ' SAR has been placed.';
+    msg.className = 'bid-message success';
+}
+
+function handleSearch(event) {
+    event.preventDefault();
+    var query = document.getElementById('search-input').value.trim().toLowerCase();
+    if (!query) return;
+    alert('🔍 Search functionality is a demo. You searched for: "' + query + '"');
+}
+
+function switchAuthTab(tab) {
+    var loginBtn  = document.getElementById('tab-login');
+    var signupBtn = document.getElementById('tab-signup');
+    var loginFrm  = document.getElementById('form-login');
+    var signupFrm = document.getElementById('form-signup');
+    
+    if (tab === 'login') {
+        loginBtn.classList.add('active');
+        signupBtn.classList.remove('active');
+        loginFrm.classList.remove('hidden');
+        signupFrm.classList.add('hidden');
+    } else {
+        signupBtn.classList.add('active');
+        loginBtn.classList.remove('active');
+        signupFrm.classList.remove('hidden');
+        loginFrm.classList.add('hidden');
+    }
+}
+
+function handleLogin(event) {
+    event.preventDefault();
+    var user = document.getElementById('login-user').value;
+    var err  = document.getElementById('login-error');
+    alert('👋 Welcome, ' + user + '! (Demo login successful)');
+    showPage('home');
+}
+
+function handleSignup(event) {
+    event.preventDefault();
+    var pass = document.getElementById('signup-pass').value;
+    var conf = document.getElementById('signup-confirm').value;
+    var msg  = document.getElementById('signup-message');
+    
+    if (pass !== conf) {
+        msg.textContent = '❌ Passwords do not match!';
+        return;
+    }
+    alert('🎉 Account created successfully! (Demo account)');
+    showPage('home');
+}
+
+function handleAdminLogin(event) {
+    event.preventDefault();
+    var user = document.getElementById('admin-user').value;
+    var pass = document.getElementById('admin-pass').value;
+    var err  = document.getElementById('admin-error');
+    
+    if (user === 'admin' && pass === 'admin123') {
+        showPage('admin-panel');
+        switchAdminTab('menu');
+    } else {
+        err.textContent = '❌ Invalid admin credentials. Use admin / admin123';
+    }
+}
+
+function switchAdminTab(tab) {
+    var tabs = document.querySelectorAll('.admin-tab');
+    for (var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove('active');
+    }
+    document.getElementById('atab-' + tab).classList.add('active');
+    
+    var panels = document.querySelectorAll('.admin-panel');
+    for (var i = 0; i < panels.length; i++) {
+        panels[i].classList.add('hidden');
+    }
+    document.getElementById('admin-' + tab).classList.remove('hidden');
+}
+
+function previewImage(event) {
+    var reader = new FileReader();
+    reader.onload = function() {
+        var output = document.getElementById('img-preview');
+        var placeholder = document.getElementById('upload-placeholder');
+        output.src = reader.result;
+        output.style.display = 'block';
+        placeholder.style.display = 'none';
     };
-
-    /* ============================================================
-       PAGE NAVIGATION  — show one page at a time
-       ============================================================ */
-    function showPage(pageId) {
-        /* Hide all pages */
-        var allPages = document.querySelectorAll('.page');
-        for (var i = 0; i < allPages.length; i++) {
-            allPages[i].classList.add('hidden');
-        }
-
-        /* Show the selected page */
-        var target = document.getElementById('page-' + pageId);
-        if (target) {
-            target.classList.remove('hidden');
-        }
-
-        /* Scroll back to top */
-        window.scrollTo(0, 0);
+    if (event.target.files[0]) {
+        reader.readAsDataURL(event.target.files[0]);
     }
+}
 
-    /* ============================================================
-       ITEM PROFILE PAGE  — load item data then navigate
-       ============================================================ */
-    function showItemPage(id) {
-        var item = items[id];
-        if (!item) return;
+function submitAuction(event) {
+    event.preventDefault();
+    var name = document.getElementById('item-name').value;
+    alert('🚀 Auction listed successfully!\nYour item "' + name + '" is now live. (Demo data)');
+    showPage('home');
+}
 
-        /* Fill in the item details */
-        document.getElementById('item-title').textContent       = item.title;
-        document.getElementById('item-title-crumb').textContent = item.title;
-        document.getElementById('item-category').textContent    = item.category;
-        document.getElementById('item-meta').textContent        =
-            '📍 ' + item.location + '  |  🗂️ ' + item.category + '  |  👤 Seller: ' + item.seller;
-        document.getElementById('item-date').textContent        =
-            '📅 Created: ' + item.date + '  |  ⭐ Rating: ' + item.rating + ' / 5';
-        document.getElementById('item-description').textContent = item.description;
-        document.getElementById('item-starting').textContent    = item.startingBid;
-        document.getElementById('item-current').textContent     = item.currentBid.toLocaleString() + ' SAR';
-        document.getElementById('item-bids').innerHTML          =
-            item.bids + ' bids  |  Ends in: <strong class="urgent">' + item.endsIn + '</strong>';
-
-        /* Item photo */
-        document.getElementById('item-main-img').src = item.img;
-        document.getElementById('item-main-img').alt = item.title;
-
-        /* Bid input placeholder */
-        document.getElementById('bid-input').placeholder = 'Min: ' + (item.currentBid + 100).toLocaleString();
-        document.getElementById('bid-input').min         = item.currentBid + 1;
-        document.getElementById('bid-input').value       = '';
-        document.getElementById('bid-message').textContent = '';
-        document.getElementById('bid-message').className   = 'bid-message';
-
-        /* Store which item is active */
-        document.getElementById('bid-input').setAttribute('data-id', id);
-
-        /* Load reviews */
-        loadReviews(item.reviews);
-
-        /* Show the page */
-        showPage('item');
-    }
-
-    /* Load reviews into the reviews list */
-    function loadReviews(reviews) {
-        var list = document.getElementById('reviews-list');
-        list.innerHTML = '';
-
-        if (reviews.length === 0) {
-            list.innerHTML = '<p style="color:#777; font-style:italic;">No reviews yet. Be the first!</p>';
-        } else {
-            for (var i = 0; i < reviews.length; i++) {
-                var r     = reviews[i];
-                var stars = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
-                var card  = document.createElement('div');
-                card.className = 'review-card';
-                card.innerHTML  =
-                    '<div class="review-header">' +
-                    '  <strong>' + r.name + '</strong>' +
-                    '  <span class="stars">' + stars + ' (' + r.rating + '/5)</span>' +
-                    '</div>' +
-                    '<p>' + r.body + '</p>' +
-                    '<p class="review-date">Posted on: ' + r.date + '</p>';
-                list.appendChild(card);
-            }
-        }
-
-        document.getElementById('review-count').textContent = reviews.length;
-    }
-
-    /* ============================================================
-       PLACE BID
-       ============================================================ */
-    function placeBid() {
-        var input  = document.getElementById('bid-input');
-        var msg    = document.getElementById('bid-message');
-        var amount = parseInt(input.value);
-        var itemId = parseInt(input.getAttribute('data-id'));
-        var item   = items[itemId];
-
-        if (!amount || amount <= item.currentBid) {
-            msg.textContent = '❌ Your bid must be higher than the current bid of ' +
-                              item.currentBid.toLocaleString() + ' SAR.';
-            msg.className = 'bid-message error';
-            return;
-        }
-
-        /* Update the item's current bid */
-        item.currentBid = amount;
-        item.bids      += 1;
-
-        /* Update displayed values */
-        document.getElementById('item-current').textContent = amount.toLocaleString() + ' SAR';
-        document.getElementById('item-bids').innerHTML =
-            item.bids + ' bids  |  Ends in: <strong class="urgent">' + item.endsIn + '</strong>';
-
-        msg.textContent = '✅ Your bid of ' + amount.toLocaleString() + ' SAR has been placed! (Demo)';
-        msg.className   = 'bid-message success';
-
-        /* Reset input */
-        input.value       = '';
-        input.placeholder = 'Min: ' + (amount + 100).toLocaleString();
-        input.min         = amount + 1;
-    }
-
-    /* ============================================================
-       SUBMIT REVIEW
-       ============================================================ */
-    function submitReview(event) {
-        event.preventDefault();
-
-        var name   = document.getElementById('review-name').value.trim();
-        var rating = parseInt(document.getElementById('review-rating').value);
-        var body   = document.getElementById('review-body').value.trim();
-        var msg    = document.getElementById('review-message');
-
-        if (!name || !body) {
-            msg.textContent = 'Please fill in all required fields.';
-            msg.className   = 'bid-message error';
-            return;
-        }
-
-        /* Build the new review card */
-        var stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
-        var today = new Date().toISOString().split('T')[0];
-        var card  = document.createElement('div');
-        card.className = 'review-card';
-        card.innerHTML =
-            '<div class="review-header">' +
-            '  <strong>' + name + '</strong>' +
-            '  <span class="stars">' + stars + ' (' + rating + '/5)</span>' +
-            '</div>' +
-            '<p>' + body + '</p>' +
-            '<p class="review-date">Posted on: ' + today + '</p>';
-
-        /* Insert at top of reviews list */
-        var list = document.getElementById('reviews-list');
-        list.insertBefore(card, list.firstChild);
-
-        /* Update count */
-        var count = parseInt(document.getElementById('review-count').textContent) + 1;
-        document.getElementById('review-count').textContent = count;
-
-        /* Reset form */
-        document.getElementById('review-name').value = '';
-        document.getElementById('review-body').value = '';
-        msg.textContent = '✅ Your review has been submitted!';
-        msg.className   = 'bid-message success';
-    }
-
-    /* ============================================================
-       AUTH: LOGIN / SIGN-UP TAB SWITCHING
-       ============================================================ */
-    function switchAuthTab(tab) {
-        if (tab === 'login') {
-            document.getElementById('form-login').classList.remove('hidden');
-            document.getElementById('form-signup').classList.add('hidden');
-            document.getElementById('tab-login').classList.add('active');
-            document.getElementById('tab-signup').classList.remove('active');
-        } else {
-            document.getElementById('form-login').classList.add('hidden');
-            document.getElementById('form-signup').classList.remove('hidden');
-            document.getElementById('tab-login').classList.remove('active');
-            document.getElementById('tab-signup').classList.add('active');
-        }
-    }
-
-    /* ============================================================
-       USER LOGIN  (demo: any credentials accepted)
-       ============================================================ */
-    function handleLogin(event) {
-        event.preventDefault();
-        var user = document.getElementById('login-user').value.trim();
-        var pass = document.getElementById('login-pass').value.trim();
-        var err  = document.getElementById('login-error');
-
-        if (!user || !pass) {
-            err.textContent = 'Please enter both username and password.';
-            err.classList.add('show');
-            return;
-        }
-
-        err.classList.remove('show');
-        showPage('home'); /* Redirect to home on success */
-    }
-
-    /* ============================================================
-       USER SIGN UP  (demo)
-       ============================================================ */
-    function handleSignup(event) {
-        event.preventDefault();
-        var pass    = document.getElementById('signup-pass').value;
-        var confirm = document.getElementById('signup-confirm').value;
-        var msg     = document.getElementById('signup-message');
-
-        if (pass !== confirm) {
-            msg.textContent = '❌ Passwords do not match.';
-            msg.classList.add('show');
-            return;
-        }
-
-        msg.style.backgroundColor = '#d4edda';
-        msg.style.color           = '#155724';
-        msg.textContent           = '✅ Account created successfully! Redirecting…';
-        msg.classList.add('show');
-
-        setTimeout(function () { showPage('home'); }, 1500);
-    }
-
-    /* ============================================================
-       ADMIN LOGIN  (demo credentials: admin / admin123)
-       ============================================================ */
-    function handleAdminLogin(event) {
-        event.preventDefault();
-        var user = document.getElementById('admin-user').value;
-        var pass = document.getElementById('admin-pass').value;
-        var err  = document.getElementById('admin-error');
-
-        if (user === 'admin' && pass === 'admin123') {
-            err.classList.remove('show');
-            showPage('admin-panel');
-        } else {
-            err.textContent = '❌ Invalid credentials. Demo: admin / admin123';
-            err.classList.add('show');
-        }
-    }
-
-    /* ============================================================
-       CREATE AUCTION — form submission (demo)
-       ============================================================ */
-    function submitAuction(event) {
-        event.preventDefault();
-        alert('✅ Your auction listing has been submitted!\n(Demo — no real data is stored in Phase 2)');
-        showPage('home');
-    }
-
-    /* Image preview before upload */
-    function previewImage(event) {
-        var file = event.target.files[0];
-        if (!file) return;
-        var reader = new FileReader();
-        reader.onload = function (e) {
-            var preview = document.getElementById('img-preview');
-            preview.src   = e.target.result;
-            preview.style.display = 'block';
-            document.getElementById('upload-placeholder').style.display = 'none';
-        };
-        reader.readAsDataURL(file);
-    }
-
-    /* ============================================================
-       SEARCH  (demo — static pages do not filter dynamically)
-       ============================================================ */
-    function handleSearch(event) {
-        event.preventDefault();
-        var q = document.getElementById('search-input').value.trim();
-        if (!q) return;
-        alert('Searching for: "' + q + '"\n\n(In a real implementation this would filter auction listings.)');
-    }
-
-    /* ============================================================
-       ADMIN: TAB SWITCHING
-       ============================================================ */
-    function switchAdminTab(tab) {
-        var panels = ['menu', 'editor', 'remover'];
-        for (var i = 0; i < panels.length; i++) {
-            document.getElementById('admin-' + panels[i]).classList.add('hidden');
-            document.getElementById('atab-' + panels[i]).classList.remove('active');
-        }
-        document.getElementById('admin-' + tab).classList.remove('hidden');
-        document.getElementById('atab-' + tab).classList.add('active');
-    }
-
-    /* ============================================================
-       ADMIN: AUCTION EDITOR
-       ============================================================ */
-    var editData = {
-        1: { name: "1972 Ford Mustang – Classic Muscle Car",      desc: "A rare 1972 Ford Mustang in excellent condition. Original engine, restored interior.", bid: 30000 },
-        2: { name: "Rolex Submariner – Vintage 1989",              desc: "An authentic Rolex Submariner from 1989. Comes with original box, papers, and service records.", bid: 12000 },
-        3: { name: 'Apple MacBook Pro 16" M3 Max – Barely Used',  desc: "Apple MacBook Pro 16-inch with the M3 Max chip, 64GB RAM, and 2TB SSD.", bid: 5500 }
+function submitReview(event) {
+    event.preventDefault();
+    var name = document.getElementById('review-name').value;
+    var rating = parseInt(document.getElementById('review-rating').value);
+    var body = document.getElementById('review-body').value;
+    var inputId = document.getElementById('bid-input').getAttribute('data-id');
+    var itemId = parseInt(inputId);
+    
+    var newReview = {
+        name: name,
+        rating: rating,
+        body: body,
+        date: new Date().toISOString().split('T')[0]
     };
+    
+    items[itemId].reviews.push(newReview);
+    loadReviews(items[itemId].reviews);
+    
+    document.getElementById('review-name').value = '';
+    document.getElementById('review-body').value = '';
+    
+    var msg = document.getElementById('review-message');
+    msg.textContent = '✅ Review added successfully!';
+    msg.className = 'bid-message success';
+}
 
-    function loadEditForm() {
-        var id      = document.getElementById('edit-select').value;
-        var wrapper = document.getElementById('edit-form-wrapper');
+function loadEditForm() {
+    var id = document.getElementById('edit-select').value;
+    var wrapper = document.getElementById('edit-form-wrapper');
+    if (!id) {
+        wrapper.classList.add('hidden');
+        return;
+    }
+    wrapper.classList.remove('hidden');
+    document.getElementById('edit-name').value = items[id].title;
+    document.getElementById('edit-desc').value = items[id].description;
+    document.getElementById('edit-bid').value = parseInt(items[id].startingBid);
+    document.getElementById('edit-message').textContent = '';
+}
 
-        if (!id) {
-            wrapper.classList.add('hidden');
-            return;
-        }
+function saveEdit() {
+    var id = document.getElementById('edit-select').value;
+    var msg = document.getElementById('edit-message');
+    items[id].title = document.getElementById('edit-name').value;
+    items[id].description = document.getElementById('edit-desc').value;
+    items[id].startingBid = document.getElementById('edit-bid').value + ' SAR';
+    
+    msg.textContent = '✅ Auction updated successfully! (Demo — changes not saved in Phase 2)';
+    msg.className   = 'bid-message success';
+}
 
-        var d = editData[parseInt(id)];
-        document.getElementById('edit-name').value = d.name;
-        document.getElementById('edit-desc').value = d.desc;
-        document.getElementById('edit-bid').value  = d.bid;
-        document.getElementById('edit-message').textContent = '';
-        document.getElementById('edit-message').className   = 'bid-message';
-        wrapper.classList.remove('hidden');
+function selectDelete(id) {
+    for (var i = 1; i <= 3; i++) {
+        var card = document.getElementById('radio-' + i);
+        if (card) card.classList.remove('selected');
+    }
+    var selected = document.getElementById('radio-' + id);
+    if (selected) selected.classList.add('selected');
+}
+
+function deleteAuction(event) {
+    event.preventDefault();
+    var selected = document.querySelector('input[name=\"del-auction\"]:checked');
+    var msg      = document.getElementById('delete-message');
+
+    if (!selected) {
+        msg.textContent = '❌ Please select an auction to delete.';
+        msg.className   = 'bid-message error';
+        return;
     }
 
-    function saveEdit() {
-        var msg = document.getElementById('edit-message');
-        msg.textContent = '✅ Auction updated successfully! (Demo — changes not saved in Phase 2)';
-        msg.className   = 'bid-message success';
+    msg.textContent = '✅ Auction #' + selected.value + ' has been deleted. (Demo — no real data removed)';
+    msg.className   = 'bid-message success';
+    selected.checked = false;
+
+    for (var i = 1; i <= 3; i++) {
+        var card = document.getElementById('radio-' + i);
+        if (card) card.classList.remove('selected');
     }
-
-    /* ============================================================
-       ADMIN: AUCTION REMOVER
-       ============================================================ */
-    function selectDelete(id) {
-        /* Highlight selected radio card */
-        for (var i = 1; i <= 3; i++) {
-            var card = document.getElementById('radio-' + i);
-            if (card) card.classList.remove('selected');
-        }
-        var selected = document.getElementById('radio-' + id);
-        if (selected) selected.classList.add('selected');
-    }
-
-    function deleteAuction(event) {
-        event.preventDefault();
-        var selected = document.querySelector('input[name="del-auction"]:checked');
-        var msg      = document.getElementById('delete-message');
-
-        if (!selected) {
-            msg.textContent = '❌ Please select an auction to delete.';
-            msg.className   = 'bid-message error';
-            return;
-        }
-
-        msg.textContent = '✅ Auction #' + selected.value + ' has been deleted. (Demo — no real data removed)';
-        msg.className   = 'bid-message success';
-        selected.checked = false;
-
-        for (var i = 1; i <= 3; i++) {
-            var card = document.getElementById('radio-' + i);
-            if (card) card.classList.remove('selected');
-        }
-    }
-
+}
 </script>
-
 </body>
 </html>
