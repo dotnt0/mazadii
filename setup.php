@@ -1,17 +1,12 @@
 <?php
-/*
-  setup.php — Mazadi One-Click Database Setup
-  =============================================
-  Visit once:  http://localhost/mazadi/setup.php
-  DELETE THIS FILE after setup is complete!
-*/
 
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
-define('DB_PASS', '');          /* Change if your MySQL root has a password */
+define('DB_PASS', '');          
 define('DB_NAME', 'mazadi');
 
-$log = []; $errors = [];
+$log = []; 
+$errors = []; 
 function ok($m)  { global $log;    $log[]    = $m; }
 function fail($m){ global $errors; $errors[] = $m; }
 
@@ -76,7 +71,6 @@ try {
     ) ENGINE=InnoDB");
     ok("Table 'reviews' created.");
 
-    /* Admin user */
     $chk = $pdo->prepare('SELECT id FROM users WHERE username=?');
     $chk->execute(['admin']);
     if (!$chk->fetch()) {
@@ -85,7 +79,6 @@ try {
         ok("Admin user created. Username: <b>admin</b> | Password: <b>admin123</b>");
     } else { ok("Admin user already exists — skipped."); }
 
-    /* Demo seller */
     $chk->execute(['mazadi_seller']);
     $row = $chk->fetch();
     if (!$row) {
@@ -93,9 +86,9 @@ try {
         $ins->execute(['mazadi_seller','seller@mazadi.sa', password_hash('seller123', PASSWORD_DEFAULT)]);
         $sellerId = $pdo->lastInsertId();
         ok("Demo seller created. Username: <b>mazadi_seller</b> | Password: <b>seller123</b>");
-    } else { $sellerId = $row['id']; ok("Demo seller already exists — skipped."); }
+    } else { $sellerId = $row['id'];
+    ok("Demo seller already exists — skipped."); }
 
-    /* Sample auctions */
     if ($pdo->query('SELECT COUNT(*) FROM auctions')->fetchColumn() == 0) {
         $ins = $pdo->prepare(
             'INSERT INTO auctions (title,category,description,location,starting_bid,current_bid,
@@ -121,6 +114,7 @@ try {
         foreach ($samples as $s) {
             $ins->execute([$s[0],$s[1],$s[2],$s[3],$s[4],$s[5],$s[6],$sellerId,'mazadi_seller',$s[7],$s[8]]);
         }
+  
         ok("3 sample auctions inserted.");
 
         $ids = $pdo->query('SELECT id FROM auctions ORDER BY id')->fetchAll(PDO::FETCH_COLUMN);
@@ -135,13 +129,12 @@ try {
             $rv->execute([$ids[2],'Noura F.',5,'Unbelievable price for such a high-spec machine. Very happy with the purchase.']);
         }
         ok("Sample reviews inserted.");
-    } else { ok("Auctions already exist — sample data skipped."); }
+    } else { ok("Auctions already exist — sample data skipped.");
+    }
 
-    /* uploads/ directory */
     $dir = __DIR__ . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR;
     if (!is_dir($dir)) { mkdir($dir, 0755, true); file_put_contents($dir.'.htaccess',"Options -Indexes\n"); ok("uploads/ directory created."); }
     else ok("uploads/ directory already exists.");
-
 } catch (PDOException $e) { fail("Database error: " . $e->getMessage()); }
 ?>
 <!DOCTYPE html>
