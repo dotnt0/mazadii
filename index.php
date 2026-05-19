@@ -648,7 +648,7 @@ async function loadAuctions(search) {
         if (c) c.innerHTML =
             '<p style="color:#c0392b;padding:20px 0;">⚠️ Could not reach the server. ' +
             'Make sure XAMPP (Apache + MySQL) is running, and open this page as ' +
-            '<strong>http://74.220.51.0/24/mazadi/index.php</strong></p>';
+            '<strong>http://localhost/mazadi/index.php</strong></p>';
     }
 }
 
