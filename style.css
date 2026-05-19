@@ -1,22 +1,3 @@
-/*
-  style.css — Mazadi Online Auction Platform
-  IT 1390 Web Systems Project — Phase 2
-  Al Imam Mohammad Ibn Saud Islamic University
-
-  Color Palette:
-    Primary Teal  : #1a6b8a
-    Dark Teal     : #145a72
-    Light Teal    : #cce8f0
-    Background    : #f5f5f5
-    Text          : #333333
-    Danger Red    : #c0392b
-    Gold          : #f0a500
-    Admin Brown   : #8b4513
-*/
-
-/* ================================================================
-   RESET & BASE
-   ================================================================ */
 * {
     margin: 0;
     padding: 0;
@@ -50,14 +31,10 @@ ul {
     font-size: 0.95rem;
 }
 
-/* Utility: hide elements */
 .hidden {
     display: none !important;
 }
 
-/* ================================================================
-   HEADER  (same on every page)
-   ================================================================ */
 header {
     background-color: #ffffff;
     border-bottom: 3px solid #1a6b8a;
@@ -86,9 +63,6 @@ header {
     margin-top: 2px;
 }
 
-/* ================================================================
-   NAVIGATION BAR  (same on every page)
-   ================================================================ */
 nav {
     background-color: #1a6b8a;
 }
@@ -102,7 +76,6 @@ nav {
     padding: 0 8px;
 }
 
-/* Nav links */
 .nav-links {
     display: flex;
 }
@@ -122,7 +95,6 @@ nav {
     text-decoration: none;
 }
 
-/* Search form */
 .search-form {
     display: flex;
     align-items: center;
@@ -156,7 +128,6 @@ nav {
     font-size: 0.82rem;
 }
 
-/* Auth buttons */
 .auth-buttons {
     display: flex;
     gap: 6px;
@@ -193,9 +164,6 @@ nav {
     color: #fff;
 }
 
-/* ================================================================
-   PAGE WRAPPER  (main content area)
-   ================================================================ */
 .page {
     max-width: 1100px;
     margin: 0 auto;
@@ -215,11 +183,7 @@ nav {
     margin-bottom: 20px;
 }
 
-/* ================================================================
-   HERO BANNER  (Home page)
-   ================================================================ */
 .hero {
-    /* Image source: Unsplash (unsplash.com) — Saudi Arabia / Riyadh cityscape */
     background-image:
         linear-gradient(rgba(26,107,138,0.82), rgba(20,90,114,0.88)),
         url('https://images.unsplash.com/photo-1770685798053-c7b282cc3188?w=1200&q=80');
@@ -250,9 +214,6 @@ nav {
     flex-wrap: wrap;
 }
 
-/* ================================================================
-   BUTTONS  (shared)
-   ================================================================ */
 .btn-primary {
     background-color: #1a6b8a;
     color: #fff;
@@ -314,9 +275,6 @@ nav {
     padding: 11px;
 }
 
-/* ================================================================
-   AUCTION LISTING CARDS  (Home page)
-   ================================================================ */
 .listing-label {
     color: #555;
     font-size: 0.85rem;
@@ -369,7 +327,6 @@ nav {
     margin-bottom: 6px;
 }
 
-/* Bid box (small — on listing cards) */
 .bid-box {
     background-color: #f0f8fb;
     border: 1px solid #1a6b8a;
@@ -421,7 +378,6 @@ nav {
     text-decoration: none;
 }
 
-/* About summary block on Home page */
 .about-summary {
     background-color: #fff;
     border: 2px solid #1a6b8a;
@@ -443,9 +399,6 @@ nav {
     margin: 0 auto 16px;
 }
 
-/* ================================================================
-   ABOUT US PAGE
-   ================================================================ */
 .about-layout {
     display: flex;
     gap: 28px;
@@ -487,7 +440,6 @@ nav {
     margin-bottom: 12px;
 }
 
-/* Three cards row */
 .cards-row {
     display: flex;
     gap: 20px;
@@ -515,7 +467,6 @@ nav {
     text-decoration: underline;
 }
 
-/* Info box */
 .info-box {
     background-color: #f0f8fb;
     border: 2px solid #1a6b8a;
@@ -531,7 +482,6 @@ nav {
 
 .info-box ul { padding-left: 24px; color: #333; }
 
-/* Project info dark box */
 .project-info {
     background-color: #1a6b8a;
     color: #fff;
@@ -545,9 +495,6 @@ nav {
     margin-bottom: 6px;
 }
 
-/* ================================================================
-   ITEM PROFILE PAGE
-   ================================================================ */
 .breadcrumb {
     font-size: 0.82rem;
     color: #777;
@@ -587,7 +534,6 @@ nav {
     margin-top: 14px;
 }
 
-/* Bid box large */
 .bid-box-large {
     flex: 0 1 260px;
     background-color: #f0f8fb;
@@ -661,7 +607,6 @@ nav {
     border: 1px solid #f5c6cb;
 }
 
-/* Reviews */
 .reviews-section {
     border-top: 2px solid #1a6b8a;
     padding-top: 20px;
@@ -698,7 +643,6 @@ nav {
 
 .review-date { color: #aaa !important; font-size: 0.75rem !important; font-style: italic; }
 
-/* Add review form */
 .add-review {
     background-color: #f0f8fb;
     border: 2px solid #1a6b8a;
@@ -711,9 +655,6 @@ nav {
 
 .back-link { color: #1a6b8a; text-decoration: underline; }
 
-/* ================================================================
-   SHARED FORM STYLES
-   ================================================================ */
 .form-group {
     margin-bottom: 14px;
 }
@@ -755,9 +696,6 @@ nav {
     align-items: center;
 }
 
-/* ================================================================
-   LOGIN / SIGN-UP PAGE
-   ================================================================ */
 .auth-container {
     max-width: 480px;
     margin: 40px auto;
@@ -771,7 +709,6 @@ nav {
     margin-bottom: 6px;
 }
 
-/* Tab switcher */
 .tab-switcher {
     display: flex;
     border: 2px solid #1a6b8a;
@@ -797,7 +734,6 @@ nav {
     font-weight: bold;
 }
 
-/* Dark form box (matches wireframe) */
 .dark-form {
     background-color: #1a3a4a;
     border-radius: 6px;
@@ -865,9 +801,6 @@ nav {
     color: #888;
 }
 
-/* ================================================================
-   CREATE AUCTION PAGE  — upload box
-   ================================================================ */
 .upload-box {
     border: 2px dashed #1a6b8a;
     border-radius: 6px;
@@ -880,9 +813,6 @@ nav {
 #upload-placeholder { padding: 40px 20px; }
 #upload-placeholder p { margin: 6px 0; }
 
-/* ================================================================
-   ADMIN PAGES
-   ================================================================ */
 .admin-badge {
     display: inline-block;
     background-color: #8b4513;
@@ -906,7 +836,6 @@ nav {
     width: 100%;
 }
 
-/* Admin page header bar */
 .admin-page-header {
     background-color: #8b4513;
     color: #fff;
@@ -920,7 +849,6 @@ nav {
     letter-spacing: 2px;
 }
 
-/* Admin tab bar */
 .admin-tabs {
     display: flex;
     background-color: #1a6b8a;
@@ -958,7 +886,6 @@ nav {
 
 .admin-panel h3 { color: #1a6b8a; margin-bottom: 6px; }
 
-/* Help requests box */
 .help-requests {
     background-color: #fff8e1;
     border: 1px solid #f0a500;
@@ -978,7 +905,6 @@ nav {
 .help-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 .help-item p { font-size: 0.88rem; color: #555; margin-bottom: 4px; }
 
-/* Activity map */
 .activity-map {
     background-color: #1a6b8a;
     border-radius: 6px;
@@ -1029,7 +955,6 @@ nav {
 .bar-fill { background-color: #cce8f0; height: 100%; border-radius: 3px; }
 .bar-fill.hot { background-color: #f0a500; }
 
-/* Auction Remover radio cards */
 .radio-card {
     display: flex;
     align-items: center;
@@ -1073,9 +998,6 @@ nav {
 
 .btn-delete:hover { background-color: #a93226; }
 
-/* ================================================================
-   FOOTER  (same on every page)
-   ================================================================ */
 footer {
     background-color: #1a6b8a;
     color: #cce8f0;
